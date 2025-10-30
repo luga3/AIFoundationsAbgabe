@@ -13,3 +13,4 @@ antwort = client.chat.completions.create(
 )
 
 print(antwort.choices[0].message.content)
+
