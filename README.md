@@ -1,1 +1,2 @@
 # AIFoundationsAbgabe
+Graded Project
