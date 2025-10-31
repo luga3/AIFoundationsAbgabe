@@ -6,7 +6,7 @@ token = os.getenv("GITHUB_TOKEN")
 
 owner = "luga3"
 repo = "AIFoundationsAbgabe"
-pr_number = 4
+pr_number = 6
 
 repo_url = f"https://api.github.com/repos/{owner}/{repo}"
 pr_url = repo_url + "/pulls"
