@@ -1,14 +1,11 @@
 import requests
 import os
 
-# Dein persönlicher GitHub Access Token
 token = os.getenv("GITHUB_TOKEN")
 
-# Repository-Daten
 owner = "luga3"
 repo = "AIFoundationsAbgabe"
 
-# Beispiel: Alle offenen Pull Requests abrufen
 url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
 headers = {"Authorization": f"token {token}"}
 
@@ -28,7 +25,7 @@ else:
     pr_number = pulls[0]["number"]
     comment_url = f"https://api.github.com/repos/{owner}/{repo}/issues/{pr_number}/comments"
 
-    data = {"body": "Danke fuer deinen Beitrag! Ich schaue mir das gleich an."}
+    data = {"body": "-----dummy text-----"}
 
     comment_response = requests.post(comment_url, headers=headers, json=data)
 
