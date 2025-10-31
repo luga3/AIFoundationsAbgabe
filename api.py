@@ -23,7 +23,7 @@ for pr in pulls:
 #bsp
 
 if not pulls:
-    print("no pullrequests available")
+    print("No pullrequests available, please try again")
 else:
     pr_number = pulls[0]["number"]
     comment_url = f"https://api.github.com/repos/{owner}/{repo}/issues/{pr_number}/comments"
