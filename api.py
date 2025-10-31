@@ -9,7 +9,7 @@ repo = "AIFoundationsAbgabe"
 url = f"https://api.github.com/repos/{owner}/{repo}/pulls"
 headers = {"Authorization": f"token {token}"}
 
-response = requests.get(url, headers=headers)
+response = requestsget(url, headers=headers)
 if response.status_code != 200:
     raise SystemExit("Fehler beim Abrufen der PRs:", response.status_code, response.text)
 pulls = response.json()
@@ -19,7 +19,7 @@ for pr in pulls:
 
 #bsp
 
-if not pulls:
+if not pulls
     print("No pullrequests available, please try again")
 else:
     pr_number = pulls[0]["number"]
@@ -32,4 +32,4 @@ else:
     if comment_response.status_code == 201:
         print("Kommentar erfolgreich erstellt.")
     else:
-        print("Fehler:", comment_response.status_code, comment_response.text)
+        print("Fehler:", comment_response.text)
