@@ -4,8 +4,8 @@ from assistent import call_sage
 
 token = os.getenv("GITHUB_TOKEN")
 
-owner = "luga3"
-repo = "AIFoundationsAbgabe"
+owner = input("Type Account Name: ")
+repo = input("Type Repository Name: ")
 pr_number = input("Type PR number: ")
 
 url_pr_files = f"https://api.github.com/repos/{owner}/{repo}/pulls/{pr_number}/files"
