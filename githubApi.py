@@ -1,6 +1,6 @@
 import requests
 import os
-from assistent import call_sage
+from sage import call_sage
 
 token = os.getenv("GITHUB_TOKEN")
 
@@ -35,6 +35,5 @@ def post_comment(comment, file_name):
     else:
         print("Error, comment was dismissed:", comment_response.status_code, comment_response.text)
 
-
-if __name__ == "__main__":
+def start_codeSage():
     comment_all_files()
